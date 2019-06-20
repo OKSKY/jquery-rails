@@ -4929,7 +4929,7 @@ jQuery.event = {
 
 					// Bind the global event handler to the element
 					if ( elem.addEventListener ) {
-						elem.addEventListener( type, eventHandle, false );
+						elem.addEventListener( type, eventHandle, {passive: false} );
 
 					} else if ( elem.attachEvent ) {
 						elem.attachEvent( "on" + type, eventHandle );
